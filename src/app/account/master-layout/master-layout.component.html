@@ -1,0 +1,51 @@
+<!-- BEGIN Page Wrapper -->
+<div class="page-wrapper">
+    <div class="page-inner">
+        <!-- BEGIN Left Aside -->
+        <aside class="page-sidebar">
+            <!-- BEGIN PRIMARY NAVIGATION -->
+            <app-sidebar></app-sidebar>
+            <!-- END PRIMARY NAVIGATION -->
+        </aside>
+        <!-- END Left Aside -->
+        <div class="page-content-wrapper">
+            <!-- BEGIN Page Header -->
+            <app-header></app-header>
+            <!-- END Page Header -->
+            <!-- BEGIN Page Content -->
+            <router-outlet></router-outlet>
+            <!-- this overlay is activated only when mobile menu is triggered -->
+            <div class="page-content-overlay" data-action="toggle" data-class="mobile-nav-on"></div>
+            <!-- END Page Content -->
+            <app-footer></app-footer>
+            <!-- BEGIN Shortcuts -->
+            <app-shortcut></app-shortcut>
+            <!-- modal shortcut -->
+            <!-- END Shortcuts -->
+        </div>
+    </div>
+</div>
+<!-- END Page Wrapper -->
+<!-- BEGIN Quick Menu -->
+<!-- to add more items, please make sure to change the variable '$menu-items: number;' in your _page-components-shortcut.scss -->
+<nav class="shortcut-menu d-none d-sm-block">
+    <input type="checkbox" class="menu-open" name="menu-open" id="menu_open" />
+    <label for="menu_open" class="menu-open-button ">
+        <span class="app-shortcut-icon d-block"></span>
+    </label>
+    <a href="#" class="menu-item btn" data-toggle="tooltip" data-placement="left" title="Scroll Top">
+        <i class="fal fa-arrow-up"></i>
+    </a>
+    <a href="login.html" class="menu-item btn" data-toggle="tooltip" data-placement="left" title="Logout">
+        <i class="fal fa-sign-out"></i>
+    </a>
+    <a href="#" class="menu-item btn" data-action="app-fullscreen" data-toggle="tooltip" data-placement="left"
+        title="Full Screen">
+        <i class="fal fa-expand"></i>
+    </a>
+    <a href="#" class="menu-item btn" data-action="app-print" data-toggle="tooltip" data-placement="left"
+        title="Print page">
+        <i class="fal fa-print"></i>
+    </a>
+
+</nav>

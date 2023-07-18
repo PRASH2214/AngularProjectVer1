@@ -10,8 +10,8 @@ export class MasterLayoutComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.loadScript('../assets/js/vendors.bundle.js');
-    this.loadScript('../assets/js/app.bundle.js');
+    this.loadScript('assets/js/vendors.bundle.js');
+    this.loadScript('assets/js/app.bundle.js');
   }
   public loadScript(url: string) {
     const body = <HTMLDivElement> document.body;
